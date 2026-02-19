@@ -1,0 +1,9 @@
+house-price-app/
+│
+├── app.py                 ← Your main Flask application (used for running the web app)
+├── model.pkl              ← Your saved trained ML model (used for prediction)
+├── train_model.py         ← Script you used to train and save the model (run only once)
+├── boston.csv             ← The dataset (optional now, since model is already trained)
+└── templates/             ← HTML files live here
+    ├── index.html         ← The form to enter house details
+    └── result.html        ← The result page showing predicted price

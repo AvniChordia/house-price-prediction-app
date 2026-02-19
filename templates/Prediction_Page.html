@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Property Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <style>
+    body {
+        background-image: url('{{ url_for('static', filename='bg.png') }}');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+    }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .btn {
+            border-radius: 25px;
+            font-size: 18px;
+            padding: 10px 25px;
+        }
+        .btn-outline-primary {
+            color: #2980b9;
+            border-color: #2980b9;
+        }
+        .btn-outline-primary:hover {
+            background: #2980b9;
+            color: white;
+        }
+        .footer {
+            margin-top: 60px;
+        }
+    .form-container {
+        
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        width: 100%;              /* Full width inside its parent */
+        max-width: 800px;         /* 👈 Limit width so it doesn't touch edges */
+        margin: auto;             /* 👈 Center the form on the page */
+    }
+
+    
+    
+
+    </style>
+</head>
+
+<body>
+    <!-- Test Image Preview (can be removed later) -->
+    <!-- <img src="{{ url_for('static', filename='Prediction_bg.png') }}" width="200"> -->
+
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2 class="mb-4 text-center">Enter Details for Price Prediction</h2>
+            <form method="POST">
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Total Area (sq. ft.)</label>
+                        <input type="number" name="total_area" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Residential Land (%)</label>
+                        <input type="number" name="residential_land_percent" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Base Price per sq. ft.</label>
+                        <input type="number" name="base_price" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Expected Price (₹)</label>
+                        <input type="number" name="expected_price" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Average Number of Rooms</label>
+                        <input type="number" step="0.1" name="avg_rooms" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Crime Rate</label>
+                        <select name="crime_rate" class="form-control" required>
+                            <option value="">Select Crime Rate Range</option>
+                            <option value="5">0 - 10</option>
+                            <option value="15">10 - 20</option>
+                            <option value="25">20 - 30</option>
+                            <option value="35">30 - 40</option>
+                            <option value="45">40 - 50</option>
+                            <option value="55">50 - 60</option>
+                            <option value="65">60 - 70</option>
+                            <option value="75">70 - 80</option>
+                            <option value="85">80 - 90</option>
+                            <option value="95">90 - 100</option>
+                        </select>
+                    </div>
+
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Number of Offices Nearby</label>
+                        <input type="number" name="offices" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Near River</label>
+                        <select name="rivers" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Number of Cafes</label>
+                        <input type="number" name="cafes" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>School Type</label>
+                        <select name="school_type" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="private">Private</option>
+                            <option value="govt">Government</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label>Number of Schools</label>
+                        <input type="number" name="num_schools" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Number of Malls</label>
+                        <input type="number" name="malls" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                   <div class="col-md-6">
+                        <label>Commercial Land</label>
+                        <select name="comm_land" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-4">Predict Price</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
