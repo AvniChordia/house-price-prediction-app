@@ -61,7 +61,7 @@ def generate_feature_plot(df, x_feature, y_feature, predicted_price=None, timest
             )
     return fig
 
-# ✅ Force login redirect if not authenticated
+
 @app.route('/')
 def home():
     if current_user.is_authenticated:
@@ -212,13 +212,11 @@ def show_previous():
 
         df = pd.DataFrame(data)
 
-        # ✅ Generate feature-based plots (no current prediction highlight)
         figs = []
         figs.append(generate_feature_plot(df, 'residential_land', 'predicted_price', show_current_dot=False))
         figs.append(generate_feature_plot(df, 'avg_rooms', 'predicted_price', show_current_dot=False))
         figs.append(generate_feature_plot(df, 'crime_rate', 'predicted_price', show_current_dot=False))
 
-        # ✅ Convert plots to HTML
         graphs_html = [fig.to_html(full_html=False) for fig in figs]
 
         return render_template("previous_predictions.html",
@@ -238,7 +236,7 @@ def debug_predictions():
         output.append(f"ID: {p.id}, UserID: {p.user_id}, Price: ₹{p.price_in_inr}")
     return "<br>".join(output)
 
-# ✅ Logout route
+#  Logout route
 @app.route('/logout')
 def logout():
     logout_user()
