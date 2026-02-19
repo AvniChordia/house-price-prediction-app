@@ -11,9 +11,7 @@ import csv
 import plotly.express as px
 import plotly.graph_objects as go
 from prediction import Prediction
-import webbrowser
-import threading
-import time
+
 
 
 app = Flask(__name__)
@@ -245,21 +243,11 @@ def logout():
     return redirect(url_for('auth.login'))
 
 
-def open_browser():
-    time.sleep(1)  # Wait a second for server to start
-    webbrowser.open("http://127.0.0.1:5000/login")
 
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-        try:
-            logout_user()
-        except:
-            pass
 
-    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":
-        threading.Thread(target=open_browser).start()
-
-    app.run(debug=True)
+    app.run()
 
 
