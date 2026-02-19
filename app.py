@@ -22,6 +22,9 @@ app.config['SQLALCHEMY_BINDS'] = {
 }
 
 db.init_app(app)
+with app.app_context():
+    db.create_all()
+
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -243,9 +246,6 @@ def logout():
 
 
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-
     app.run()
 
 
