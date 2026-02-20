@@ -1,4 +1,5 @@
 🏠 House Price Prediction Web App
+
 A full-stack Machine Learning web application that predicts house prices based on multiple features like area, crime rate, nearby facilities, etc.
 
 The app includes user authentication, prediction history tracking, and interactive data visualizations.
