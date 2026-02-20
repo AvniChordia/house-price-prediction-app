@@ -11,12 +11,19 @@ The app includes user authentication, prediction history tracking, and interacti
 ✨ **Features**
 
 🔐 User Registration & Login System
+
 🤖 Machine Learning based Price Prediction
+
 📊 Interactive Graphs & Visualizations
+
 💾 Stores Prediction History per User
+
 📁 CSV Export of Predictions
+
 📈 Expected vs Predicted Price Comparison
+
 🎯 Clean UI with Responsive Design
+
 
 🛠️ **Tech Stack**
 Frontend
