@@ -26,24 +26,41 @@ The app includes user authentication, prediction history tracking, and interacti
 
 
 🛠️ **Tech Stack**
-Frontend
-HTML
-CSS
-Bootstrap
-Backend
-Python
-Flask
-Flask-Login
-Flask-SQLAlchemy
-Machine Learning
-Scikit-learn
-Pandas
-NumPy
-Joblib
-Visualization
-Plotly
-Deployment
-Render
+-Frontend
+
+-HTML
+
+-CSS
+
+-Bootstrap
+
+-Backend
+
+-Python
+
+-Flask
+
+-Flask-Login
+
+-Flask-SQLAlchemy
+
+-Machine Learning
+
+-Scikit-learn
+
+-Pandas
+
+-NumPy
+
+-Joblib
+
+-Visualization
+
+-Plotly
+
+-Deployment
+
+-Render
 
 ⚙️ **How to Run Locally**
 
@@ -97,26 +114,26 @@ http://127.0.0.1:5000
 
 📊 **How It Works**
 
-User logs into the system
+-User logs into the system
 
-Enters house parameters
+-Enters house parameters
 
-ML model predicts price
+-ML model predicts price
 
-Results stored in database
+-Results stored in database
 
-Interactive graphs generated
+-Interactive graphs generated
 
 
 🔮 **Future Improvements**
 
-Add more advanced ML models
+-Add more advanced ML models
 
-Deploy with PostgreSQL database
+-Deploy with PostgreSQL database
 
-Add API support
+-Add API support
 
-Improve UI design
+-Improve UI design
 
 
 👩‍💻 **Author**
